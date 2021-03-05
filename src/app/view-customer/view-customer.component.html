@@ -1,0 +1,45 @@
+
+
+
+
+
+<div class="main_wrapper">
+    <div class="container-fluid p-0 dashboard__parent">
+
+        <div class="w-100 h-100 d-flex flex-">
+          
+
+            <div class="main_display w-100 ">
+              <app-nav></app-nav>
+                 
+                <div class="main_section p-3 position-relative" style="z-index: 20;">
+                    <div class="container" >
+                        <div class="row  border justify-content-center align-items-center">
+                             <div class=" mx-auto w-50 py-5">
+                                <h5 class=" mb-4">Customer Details</h5>
+
+                                <p class="customerDetail "> <span class="pe-3"> Name</span> {{ aCustomer?.fullname }} </p>
+    
+                                <p class="customerDetail"> <span class="pe-3"> Email</span> {{ aCustomer?.email }}  </p>
+    
+                                <p class="customerDetail"> <span>Phone</span>  {{ aCustomer?.phone }} </p>
+    
+                                <p class="customerDetail"> <span class="pe-3"> Room Booked</span> {{ aCustomer?.roomBooked }}</p>
+    
+                                <p class="customerDetail"> <span class="pe-3"> Checked In?</span> {{ aCustomer?.checkedInStatus }} </p>
+                             </div>
+                            
+                        </div>
+
+                      
+
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+             
+        </div>
+       
+    </div>
+

@@ -1,0 +1,38 @@
+<div class="main_wrapper">
+    <div class="container-fluid p-0 dashboard__parent">
+
+        <div class="w-100 h-100 d-flex flex-">
+          
+
+            <div class="main_display w-100 ">
+              <app-nav></app-nav>
+                 
+                <div class="main_section p-3 position-relative" style="z-index: 20;">
+                    <div class="container" >
+                        <div class="row  border justify-content-center align-items-center">
+                             <div class=" mx-auto w-50 py-5">
+                                <h5 class=" mb-4">Room Details</h5>
+                                <p class="d-flex align-items-center justify-content-center"><img [src]="aRoom?.picture" style="max-width: 100px;" alt=""></p>
+
+                                <p class="customerDetail "> <span class="pe-3"> Name</span> {{ aRoom?.type }} </p>
+    
+                                <p class="customerDetail"> <span class="pe-3"> Status</span> {{ aRoom?.status }}  </p>
+    
+                                <p class="customerDetail"> <span class="pe-3">Service</span>  {{ aRoom?.services }} </p>
+    
+                               
+                             </div>
+                            
+                        </div>
+
+                      
+
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+             
+        </div>
+       
+    </div>

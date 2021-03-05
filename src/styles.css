@@ -1,1 +1,309 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+:root {
+    --primary-app-color:rgba(0, 0, 166);
+    --primary-button-color: #0069d9;
+    --secondary-color: #fff;
+    --primary-box-shadow:  rgba(55,81,255,.35);
+    --dashboard-maincolor: rgba(240, 245, 249, 1);
+    --light-FontFamily: 'Forma DJR Text light';
+    --bold-FontFamily: "Forma DJR Text Bold"
+  }
+
+  /* 0px 8px 15px */
+
+@font-face {
+    font-family: "Forma DJR Text light";
+    src: url("./assets/fonts/formadjrtext-light-edu-webfont.woff") format("woff"),
+        url("./assets/fonts/formadjrtext-light-edu-webfont.woff2") format("woff2");     
+    font-weight: 300;
+    font-style: normal;
+  }
+
+
+  @font-face {
+    font-family: "Forma DJR Text Bold";
+    src: url("./assets/fonts/formadjrtext-bold-edu-webfont.woff") format("woff"),
+        url('./assets/fonts/formadjrtext-bold-edu-webfont.woff2') format("woff2");     
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  
+  
+  button.primary{
+    background-color: var( --primary-button-color) ;
+    border-color:var( --primary-box-shadow) ;
+    box-shadow: 0px 8px 15px var(--primary-box-shadow) !important;
+    cursor: pointer !important;
+    color: var(--secondary-color);
+  }
+
+  button.primary:hover {
+    background-color: var( --primary-button-color) !important;
+    color: var(--secondary-color);
+    /* border-color: var( --global-black) !important; */
+    transform: translateY(-3px);
+    transition: transform ease-in-out 0.5s;
+
+}
+  
+
+  body > *{
+      font-family: 'Forma DJR Text light';
+  }
+
+
+  
+
+  .main{
+    background-color: var(--secondary-color);
+    width: 100vw !important;
+    height: 100vh !important;
+  }
+
+  .temporary{
+    /* min-width: 50vh; */
+    
+  }
+
+  .logo_container{
+    padding: .5rem 2rem;
+
+  }
+
+  .logo_container img{
+    max-width: 150px;
+  }
+
+  .content_parent{
+    height: 480px;
+  }
+
+  .p_wordings{
+    font-family: 'Forma DJR Text Bold';
+    line-height: 38px;
+    text-align: center;
+    letter-spacing: 0.025rem;
+    font-size: 2rem;
+  }
+
+  .not_member{
+    font-size: 20px;
+    letter-spacing: 0.03rem;
+  }
+
+  .form-label, .modified_header{
+    font-family: 'Forma DJR Text Bold';
+  }
+
+  .modify_Parent{
+    background-color: var(--primary-app-color);
+    height: 100%;
+  }
+
+ .modify_Parent > .col-md-7{
+   padding-top: 5rem;
+ } 
+  .btn-outline-info.primary{
+    background-color: var(--secondary-color);
+    color: var(--primary-app-color);
+  }
+
+  .btn-outline-info.primary:hover{
+    background-color: var(--secondary-color) !important;
+    color: var(--primary-button-color);
+    border-color: var(--primary-button-color) !important;
+    transform: translateY(-3px);
+    transition: transform ease-in-out 0.5s;
+  }
+
+
+  /* dashboard styles */
+ 
+  .main_wrapper{
+    margin: 0;
+    overflow: hidden;
+    height: 100vh;
+  }
+
+  .dashboard__parent{
+    height: 100%;
+    width: auto;
+    background-color: var(--dashboard-maincolor);
+  }
+
+  .sideBar_parent{
+     background-color: var(--secondary-color);
+     /* width: 260px; */
+     /* box-shadow: ; */
+  }
+
+  .main_display{
+    width: auto;
+    overflow-y: auto;
+  }
+
+  .dashboard_logo{
+    overflow: hidden;
+  }
+
+
+  .dashboard_logo img{
+    max-width: 145px;
+    object-fit: cover;
+  }
+
+  .links_parent{
+    list-style: none;
+   
+  }
+
+  .links_parent li a{
+    text-decoration: none;
+    font-family: 'Forma DJR Text Bold';
+    color: black;
+  }
+
+  .link_itself{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    
+  }
+
+  .link_itself:hover, .link_itself.active{
+    background-color: var(--dashboard-maincolor);
+    transform: translateX(20px) scaleX(1.2);
+    transition: all 0.2s ease-in;
+  }
+
+  .link_itself:hover a {
+    font-family: var(--light-FontFamily);
+    color: var(--primary-app-color);
+  }
+
+  .link_itself:hover i{
+    color: var(--primary-app-color);
+  }
+
+  .top-nav{
+    background-color: var(--primary-app-color);
+    color: var(--secondary-color);
+  }
+
+  .top-nav a{
+    color: var(--secondary-color)
+  }
+
+  .dropdown-menu a{
+    color: black;
+  }
+
+  .nameOfComponent a {
+    text-decoration: none;
+      color: var(--secondary-color);
+      font-size: 1.3rem;
+  }
+
+  .toggler{
+    border: 1px solid rgb(255, 255, 255, 0.3);
+    padding: 6px;
+    width: 30px;
+    display: none;
+  }
+
+  .toggler div{
+    width: 100%;
+    height: 2px;
+    background-color: var(--secondary-color);
+    margin: 2px;
+    display: none;
+
+  }
+
+  .main_section{
+    overflow-y: auto;
+  }
+
+  .main_section h5{
+    font-family: var(--bold-FontFamily);
+  }
+  
+  .summary{
+    cursor: pointer;
+    background-color: var(--secondary-color);
+    box-shadow:  0 0 2px 1px var(--primary-box-shadow);
+  }
+
+  .main_section .prefix{
+    font-size: 1.8rem;
+    font-family: var(--bold-FontFamily);
+  }
+
+  .user_management_heading{
+    border-bottom: 1px solid var(--primary-button-color);
+  }
+
+  .user_management_heading span:first-child{
+    font-size: 1.3rem;
+    font-family: var(--bold-FontFamily);
+  }
+
+  .user_management_heading span:last-child a{
+    color: var(--secondary-color);
+    background-color: var(--primary-button-color);
+    width: 30px;
+    text-decoration: none;
+    box-shadow: 0px 8px 15px var(--primary-box-shadow);
+    cursor: pointer;
+  }
+
+  .generic_edit, .generic_view{
+    background-color: var(--primary-button-color);
+    width: 50px;
+    margin-right: 4px;
+    padding: 1px 5px;
+    color: var(--secondary-color); 
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+
+  .generic_view{
+    background-color: var(--secondary-color);
+    border: 1px solid var(--primary-box-shadow);
+    color: black;
+  }
+
+
+  @media screen and (max-width: 995px){
+    /* .toggler{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    } */
+    .sideBar_parent{
+      position: absolute;
+      transform: translateX(-300px);
+      transition: transform 0.3s ease-in;
+    }
+
+    .sideBar_parent.show{
+      transform: translateX(0px);
+    }
+
+    
+  }
+
+  /* view customers */
+  .customerDetail{
+    font-family: var(--light-FontFamily);
+  }
+
+  .customerDetail span{
+    font-family: var(--bold-FontFamily);
+  }

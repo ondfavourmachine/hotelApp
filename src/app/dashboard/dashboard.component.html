@@ -1,0 +1,103 @@
+
+
+<div class="main_wrapper">
+    <div class="container-fluid p-0 dashboard__parent">
+
+        <div class="w-100 h-100 d-flex flex-">
+          <div class=" d-flex flex-column sideBar_parent w-25">
+            <div class="dashboard_logo d-inline-flex mt-3 ps-3 w-100">
+                <img src="../../assets/images/booze-black.png" alt="">
+            </div>
+            <ul class="links_parent h-75 d-flex flex-column justify-content-around mt-5 px-2">
+                <li class="link_itself w-100  px-3 py-2 text-center"> <i class="fab fa-windows pe-3"></i> <a >  Dashboard</a></li>
+                <li class="link_itself w-100  px-3 py-2"> <i class="fas fa-person-booth pe-3"></i> <a routerLink="/rooms">Rooms</a></li>
+                <li class="link_itself w-100  px-3 py-2"> <i class="fa fa-users pe-3"></i> <a routerLink="/customers">Customers</a></li>
+                <li class="link_itself w-100  px-3 py-2"> <i class="fas fa-sliders-h pe-3"></i> <a href="">Settings</a></li>
+               
+                <li class="link_itself w-100 px-2 py-2"> <i class="fas fa-sign-out-alt pe-3"></i> <a (click)="logout()">Logout</a></li>
+            </ul>
+        </div>
+
+            <div class="main_display w-100 ">
+              <app-nav></app-nav>
+                 
+                <div class="main_section p-3 position-relative" style="z-index: 20;">
+                    <div class="container" >
+                        <div class="row ">
+                            <h5 class="">Overview</h5>
+                            <div  routerLink="/customers" class="summary col-sm h-25 border rounded p-2 m-2  d-flex justify-content-between flex-column">
+                                <img src="../../assets/images/customer.svg"  style="max-width: 40px;" alt="">
+                                <p class="w-100 mb-0 mt-3 "><span class="me-1 prefix"> {{customers?.length || 0 }} </span> Customers    </p>
+                            </div>
+                            <div routerLink="/rooms" class=" summary col-sm h-25 border rounded p-2 m-2 d-flex justify-content-between flex-column">
+                                <img src="../../assets/images/hotel.svg" style="max-width: 40px;" alt="">
+                                <p class="w-100 mb-0 mt-3 "> <span class="me-1 prefix"> 3</span>  Rooms</p>
+                            </div>
+                            <div class=" summary  col-sm h-25  border rounded p-2 m-2 d-flex justify-content-between flex-column">
+                                <img src="../../assets/images/booking.svg" style="max-width: 40px;" alt="">
+                                <p class="w-100 mb-0 mt-3 "> <span class="me-1 prefix">3</span> Booked</p>
+                            </div>
+                            <div class=" summary  col-sm h-25 border rounded p-2 m-2 d-flex justify-content-between flex-column">
+                                <img src="../../assets/images/open-door.svg" style="max-width: 40px;" alt="">
+                                <p class="w-100 mb-0 mt-3 "> <span class="me-1 prefix"> 3</span> Vacant</p>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3 border rounded">
+                            <div class="user_management_heading px-3 mb-3 py-2 d-flex h-25 w-100 justify-content-between align-items-center">
+                                <span class="">Recent customers </span> <span><a class="px-3 py-1" routerLink="/customers"> View all customers</a></span>
+                            </div>
+                            <div class="table-information">
+                                <table class="table table-hover">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Fullname</th>
+                                        <th scope="col">Email</th>
+                                        <th scope="col">Phone</th>
+                                        <th scope="col">Amount paid</th>
+                                        <th scope="col">User status</th>
+                                        <th scope="col">Actions</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr *ngFor="let customer of customers; index as i">
+                                        <th scope="row"> {{ i + 1 }} </th>
+                                        <td> {{customer?.fullname}}</td>
+                                        <td>  {{ customer?.email}} </td>
+                                        <td>{{ customer?.phone }}</td>
+                                        <td> {{ customer?.amountPaid }} </td>
+                                        <td> {{ customer?.checkedInStatus }} </td>
+                                        <td class="d-inline-flex justify-content-between align-items-center">
+                                            <a class="generic_edit" >Edit </a> 
+                                            <a class="generic_view" (click)="viewCustomer(customer)"> View</a> 
+                                        </td>
+                                      </tr>
+
+                                     
+                                      <!-- <tr>
+                                        <th scope="row">2</th>
+                                        <td>Jacob</td>
+                                        <td>Thornton</td>
+                                        <td>@fat</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">3</th>
+                                        <td colspan="2">Larry the Bird</td>
+                                        <td>@twitter</td>
+                                      </tr> -->
+                                    </tbody>
+                                  </table>
+                            </div>
+                        </div>
+
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+             
+        </div>
+       
+    </div>
+
